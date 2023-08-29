@@ -5,7 +5,8 @@ from packaging import version
 
 from ...utils._exceptions import DimensionError
 from .._explainer import Explainer
-from ..tf_utils import _get_graph, _get_model_inputs, _get_model_output, _get_session
+from ..tf_utils import (_get_graph, _get_model_inputs, _get_model_output,
+                        _get_session)
 
 tf = None
 tf_ops = None
@@ -83,12 +84,10 @@ class TFDeep(Explainer):
         if tf is None:
             from tensorflow.python.eager import backprop as tf_backprop
             from tensorflow.python.eager import execute as tf_execute
-            from tensorflow.python.framework import (
-                ops as tf_ops,  # pylint: disable=E0611
-            )
-            from tensorflow.python.ops import (
-                gradients_impl as tf_gradients_impl,  # pylint: disable=E0611
-            )
+            from tensorflow.python.framework import \
+                ops as tf_ops  # pylint: disable=E0611
+            from tensorflow.python.ops import \
+                gradients_impl as tf_gradients_impl  # pylint: disable=E0611
             if not hasattr(tf_gradients_impl, "_IsBackpropagatable"):
                 from tensorflow.python.ops import gradients_util as tf_gradients_impl
             import tensorflow as tf

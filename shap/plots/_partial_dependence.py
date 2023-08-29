@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 
 from .. import Explanation
-from ..plots.colors import blue_rgb, light_blue_rgb, red_blue_transparent, red_rgb
+from ..plots.colors import (blue_rgb, light_blue_rgb, red_blue_transparent,
+                            red_rgb)
 from ..utils import convert_name
 
 

@@ -15,13 +15,8 @@ from ..utils import safe_isinstance
 from ..utils._exceptions import DimensionError
 from . import colors
 from ._labels import labels
-from ._utils import (
-    convert_color,
-    convert_ordering,
-    get_sort_order,
-    merge_nodes,
-    sort_inds,
-)
+from ._utils import (convert_color, convert_ordering, get_sort_order,
+                     merge_nodes, sort_inds)
 
 
 # TODO: Add support for hclustering based explanations where we sort the leaf order by magnitude and then show the dendrogram to the left

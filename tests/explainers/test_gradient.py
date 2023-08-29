@@ -19,14 +19,8 @@ def test_tf_keras_mnist_cnn(random_seed):
 
     from tensorflow.compat.v1 import ConfigProto, InteractiveSession
     from tensorflow.keras import backend as K
-    from tensorflow.keras.layers import (
-        Activation,
-        Conv2D,
-        Dense,
-        Dropout,
-        Flatten,
-        MaxPooling2D,
-    )
+    from tensorflow.keras.layers import (Activation, Conv2D, Dense, Dropout,
+                                         Flatten, MaxPooling2D)
     from tensorflow.keras.models import Sequential
 
     config = ConfigProto()

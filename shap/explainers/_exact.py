@@ -5,12 +5,8 @@ from numba import njit
 
 from .. import links
 from ..models import Model
-from ..utils import (
-    MaskedModel,
-    delta_minimization_order,
-    make_masks,
-    shapley_coefficients,
-)
+from ..utils import (MaskedModel, delta_minimization_order, make_masks,
+                     shapley_coefficients)
 from ._explainer import Explainer
 
 log = logging.getLogger('shap')

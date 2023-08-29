@@ -18,18 +18,11 @@ from tqdm.auto import tqdm
 
 from .._explanation import Explanation
 from ..utils import safe_isinstance
-from ..utils._legacy import (
-    DenseData,
-    IdentityLink,
-    SparseData,
-    convert_to_data,
-    convert_to_instance,
-    convert_to_instance_with_index,
-    convert_to_link,
-    convert_to_model,
-    match_instance_to_data,
-    match_model_to_data,
-)
+from ..utils._legacy import (DenseData, IdentityLink, SparseData,
+                             convert_to_data, convert_to_instance,
+                             convert_to_instance_with_index, convert_to_link,
+                             convert_to_model, match_instance_to_data,
+                             match_model_to_data)
 from ._explainer import Explainer
 
 log = logging.getLogger('shap')

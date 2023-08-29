@@ -11,12 +11,9 @@ from packaging import version
 from .. import maskers
 from .._explanation import Explanation
 from ..utils import assert_import, record_import_error, safe_isinstance
-from ..utils._exceptions import (
-    ExplainerError,
-    InvalidFeaturePerturbationError,
-    InvalidMaskerError,
-    InvalidModelError,
-)
+from ..utils._exceptions import (ExplainerError,
+                                 InvalidFeaturePerturbationError,
+                                 InvalidMaskerError, InvalidModelError)
 from ..utils._legacy import DenseData
 from ._explainer import Explainer
 
@@ -1603,9 +1600,8 @@ class IsoTree(SingleTree):
     def __init__(self, tree, tree_features, normalize=False, scaling=1.0, data=None, data_missing=None):
         super().__init__(tree, normalize, scaling, data, data_missing)
         if safe_isinstance(tree, "sklearn.tree._tree.Tree"):
-            from sklearn.ensemble._iforest import (
-                _average_path_length,  # pylint: disable=no-name-in-module
-            )
+            from sklearn.ensemble._iforest import \
+                _average_path_length  # pylint: disable=no-name-in-module
 
             def _recalculate_value(tree, i , level):
                 if tree.children_left[i] == -1 and tree.children_right[i] == -1:

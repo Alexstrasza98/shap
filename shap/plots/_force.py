@@ -21,7 +21,8 @@ except ImportError:
 
 from ..plots._force_matplotlib import draw_additive_plot
 from ..utils import hclust_ordering
-from ..utils._legacy import Data, DenseData, Instance, Link, Model, convert_to_link
+from ..utils._legacy import (Data, DenseData, Instance, Link, Model,
+                             convert_to_link)
 from ._labels import labels
 
 

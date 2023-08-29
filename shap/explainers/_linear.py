@@ -6,11 +6,9 @@ from tqdm.auto import tqdm
 
 from .. import links, maskers
 from ..utils import safe_isinstance
-from ..utils._exceptions import (
-    DimensionError,
-    InvalidFeaturePerturbationError,
-    InvalidModelError,
-)
+from ..utils._exceptions import (DimensionError,
+                                 InvalidFeaturePerturbationError,
+                                 InvalidModelError)
 from ._explainer import Explainer
 
 

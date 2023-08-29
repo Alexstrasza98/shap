@@ -1,15 +1,8 @@
 import numpy as np
 import sklearn
 
-from .. import (
-    DeepExplainer,
-    GradientExplainer,
-    KernelExplainer,
-    LinearExplainer,
-    SamplingExplainer,
-    TreeExplainer,
-    kmeans,
-)
+from .. import (DeepExplainer, GradientExplainer, KernelExplainer,
+                LinearExplainer, SamplingExplainer, TreeExplainer, kmeans)
 from ..explainers import other
 from .models import KerasWrap
 

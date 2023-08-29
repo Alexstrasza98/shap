@@ -2,7 +2,8 @@ import numpy as np
 from transformers import AutoTokenizer
 
 import shap.benchmark as benchmark
-from shap.maskers import FixedComposite, Image, Impute, Independent, Partition, Text
+from shap.maskers import (FixedComposite, Image, Impute, Independent,
+                          Partition, Text)
 
 
 def model(x, y):

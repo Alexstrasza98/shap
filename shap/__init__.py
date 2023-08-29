@@ -2,7 +2,6 @@
 __version__ = "0.42.1"
 
 from ._explanation import Cohorts, Explanation
-
 # explainers
 from .explainers import other
 from .explainers._additive import Additive as AdditiveExplainer
@@ -41,15 +40,18 @@ if have_matplotlib:
     from .plots._bar import bar_legacy as bar_plot
     from .plots._beeswarm import summary_legacy as summary_plot
     from .plots._decision import decision as decision_plot
-    from .plots._decision import multioutput_decision as multioutput_decision_plot
+    from .plots._decision import \
+        multioutput_decision as multioutput_decision_plot
     from .plots._embedding import embedding as embedding_plot
     from .plots._force import force as force_plot
     from .plots._force import getjs, initjs, save_html
-    from .plots._group_difference import group_difference as group_difference_plot
+    from .plots._group_difference import \
+        group_difference as group_difference_plot
     from .plots._heatmap import heatmap as heatmap_plot
     from .plots._image import image as image_plot
     from .plots._monitoring import monitoring as monitoring_plot
-    from .plots._partial_dependence import partial_dependence as partial_dependence_plot
+    from .plots._partial_dependence import \
+        partial_dependence as partial_dependence_plot
     from .plots._scatter import dependence_legacy as dependence_plot
     from .plots._text import text as text_plot
     from .plots._violin import violin as violin_plot
@@ -83,7 +85,6 @@ else:
 from . import datasets, links, utils
 from .actions._optimizer import ActionOptimizer
 from .utils import approximate_interactions, sample
-
 #from . import benchmark
 from .utils._legacy import kmeans
 

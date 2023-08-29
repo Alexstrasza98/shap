@@ -4,7 +4,8 @@ import scipy.special
 from .. import models
 from .._serializable import Deserializer, Serializer
 from ..utils import safe_isinstance
-from ..utils.transformers import getattr_silent, parse_prefix_suffix_for_tokenizer
+from ..utils.transformers import (getattr_silent,
+                                  parse_prefix_suffix_for_tokenizer)
 from ._model import Model
 
 
@@ -256,6 +257,7 @@ class TeacherForcing(Model):
         """
         if self.similarity_model_type == "pt":
             import torch  # pylint: disable=import-outside-toplevel
+
             # create torch tensors and move to device
             if self.device is not None:
                 inputs = inputs.to(self.device)
